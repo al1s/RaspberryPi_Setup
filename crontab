@@ -1,0 +1,18 @@
+# reset wifi on lost connection
+  *  *   *   *   *     /usr/bin/sudo -H /usr/local/bin/wifi-reset.sh >> /dev/null 2>&1
+
+# monitor cpu temperature
+  * *   *   *   *     /usr/bin/sudo -H /usr/local/bin/cpu_temp.sh >> /dev/null 2>&1
+
+# reload browser page on lost connection
+  *  *   *   *   *     /usr/bin/sudo -H /usr/local/bin/reload_on_noconnection.sh >> /dev/null 2>&1
+
+# turn screen on/off when nobody's at home
+  0    21  *   *   1-5   vcgencmd display_power 0
+  0    6   *   *   1-5   vcgencmd display_power 1
+  30   8   *   *   1-5   vcgencmd display_power 0
+  0    18  *   *   1-5   vcgencmd display_power 1
+
+  0    21  *   *   0,6   vcgencmd display_power 0
+  0    6   *   *   0,6   vcgencmd display_power 1
+
