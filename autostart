@@ -1,4 +1,5 @@
 #sudo vi /etc/xdg/lxsession/LXDE-pi/autostart
+#sudo apt-get install unclutter xdotool
 @lxpanel --profile LXDE-pi
 @pcmanfm --desktop --profile LXDE-pi
 #@xscreensaver -no-splash
